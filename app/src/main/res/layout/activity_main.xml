@@ -50,6 +50,17 @@
                 <include
                     layout="@layout/nav_header" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:alpha="0.5"
+                    android:text="Activities"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    />
+
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/rv_home_menu"
                     android:layout_width="match_parent"
