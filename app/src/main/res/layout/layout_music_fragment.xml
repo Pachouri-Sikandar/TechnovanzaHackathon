@@ -2,93 +2,277 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/darker_gray"
+    android:clipToPadding="false">
 
     <RelativeLayout
-        android:id="@+id/top_image"
-        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
-        android:layout_height="90dp">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/city" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/black"
-            android:alpha="0.7" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:gravity="right"
-        android:orientation="horizontal"
-        android:layout_below="@id/top_image"
         android:layout_height="wrap_content"
-        android:background="@android:color/white">
+        android:id="@+id/top_container"
+        android:elevation="4dp">
+
+        <RelativeLayout
+            android:id="@+id/top_image"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/city" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:alpha="0.7" />
+        </RelativeLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_below="@id/top_image"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="8dp">
+
+                <com.pachouri.technovanzahackathon.widgets.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coldplay"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    app:textStyle="@integer/semi_bold"
+                    />
+
+                <com.pachouri.technovanzahackathon.widgets.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mystica"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    app:textStyle="@integer/regular"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                >
+
+                <com.pachouri.technovanzahackathon.widgets.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daft Punk"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    app:textStyle="@integer/semi_bold"
+                    />
+
+                <com.pachouri.technovanzahackathon.widgets.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rock"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@android:color/black"
+                    android:textSize="10sp"
+                    app:textStyle="@integer/regular"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/play" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="26dp">
+
+                <com.pachouri.technovanzahackathon.widgets.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Google Music"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:textStyle="@integer/semi_bold"
+                    />
+
+
+                <com.pachouri.technovanzahackathon.widgets.AppTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Playlist. Stations. Artists. Album"
+                    android:textColor="@android:color/white"
+                    app:textStyle="@integer/regular"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <com.pachouri.technovanzahackathon.widgets.AppTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Daft Punk"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                app:textStyle="@integer/semi_bold"
-                />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+
+                    <com.pachouri.technovanzahackathon.widgets.AppTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:textStyle="@integer/semi_bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:paddingTop="8sp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="8sp"
+                        android:text="Select Category"
+                        />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"
+                        android:alpha="0.5"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="7dp"
+                app:cardCornerRadius="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+
+                    <com.pachouri.technovanzahackathon.widgets.AppTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:textStyle="@integer/semi_bold"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:paddingTop="8sp"
+                        android:paddingLeft="8dp"
+                        android:paddingBottom="8sp"
+                        android:text="Select Category"
+                        />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"
+                        android:alpha="0.5"
+                        />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_margin="12dp"
+                        android:layout_height="wrap_content">
+
+
+                        <ImageView
+                            android:id="@+id/search_image"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/search"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <com.pachouri.technovanzahackathon.widgets.AppEditText
+                            android:layout_toLeftOf="@id/search_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textSize="18sp"
+                            android:background="@null"
+                            android:hint="Track Name"
+                            app:textStyle="@integer/regular"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
 
         </LinearLayout>
-
-    </LinearLayout>
-
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="20dp">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/play" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="26dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Google Music"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Playlist. Stations. Artists. Album"
-                android:textColor="@android:color/white"
-                />
-
-        </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>
