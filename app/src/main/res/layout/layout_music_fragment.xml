@@ -37,15 +37,15 @@
             android:orientation="horizontal"
             android:layout_below="@id/top_image"
             android:layout_height="wrap_content"
-            android:paddingBottom="6dp"
+            android:paddingBottom="8dp"
             android:background="@android:color/white">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginRight="26dp"
-                android:layout_marginTop="8dp">
+                android:layout_marginRight="36dp"
+                android:layout_marginTop="6dp">
 
                 <com.pachouri.technovanzahackathon.widgets.AppTextView
                     android:layout_width="wrap_content"
@@ -53,7 +53,7 @@
                     android:text="Coldplay"
                     android:textColor="@android:color/black"
                     android:textSize="17sp"
-                    app:textStyle="@integer/semi_bold"
+                    app:textStyle="@integer/bold"
                     />
 
                 <com.pachouri.technovanzahackathon.widgets.AppTextView
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 >
 
                 <com.pachouri.technovanzahackathon.widgets.AppTextView
@@ -82,7 +82,7 @@
                     android:text="Daft Punk"
                     android:textColor="@android:color/black"
                     android:textSize="17sp"
-                    app:textStyle="@integer/semi_bold"
+                    app:textStyle="@integer/bold"
                     />
 
                 <com.pachouri.technovanzahackathon.widgets.AppTextView
@@ -128,7 +128,7 @@
                     android:text="Google Music"
                     android:textColor="@android:color/white"
                     android:textSize="16sp"
-                    app:textStyle="@integer/semi_bold"
+                    app:textStyle="@integer/bold"
                     />
 
 
