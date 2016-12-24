@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.informedtech.app.widgets.AppTextView
+        android:id="@+id/txt_dialog_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:textSize="18sp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:paddingTop="24dp"
+        app:textStyle="@integer/regular"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginTop="20dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingBottom="8dp"
+        android:orientation="horizontal">
+
+        <com.informedtech.app.widgets.AppButton
+            android:id="@+id/btn_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="No"
+            android:padding="@dimen/dp_16"
+            android:textAllCaps="true"
+            android:layout_marginRight="8dp"
+            android:textSize="14dp"
+            style="?android:attr/borderlessButtonStyle"
+            app:textStyle="@integer/regular"/>
+
+        <com.informedtech.app.widgets.AppButton
+            android:id="@+id/btn_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16"
+            android:background="@android:color/transparent"
+            android:text="Yes"
+            android:textAllCaps="true"
+            android:textSize="14dp"
+            style="?android:attr/borderlessButtonStyle"
+            app:textStyle="@integer/regular"/>
+
+
+    </LinearLayout>
+</LinearLayout>
