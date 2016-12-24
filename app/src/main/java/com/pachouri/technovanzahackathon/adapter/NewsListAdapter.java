@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.pachouri.technovanzahackathon.R;
 import com.pachouri.technovanzahackathon.model.NewsListModel;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -56,7 +57,17 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsLi
                 Picasso.with(context).load(newsListModel.getUserImageUrl()).into(holder
                         .imageViewNewsBy);
                 Picasso.with(context).load(newsListModel.getNewImageUrl()).into(holder
-                        .imageViewNews);
+                        .imageViewNews, new Callback() {
+                    @Override
+                    public void onSuccess() {
+
+                    }
+
+                    @Override
+                    public void onError() {
+
+                    }
+                });
             }
         }
     }

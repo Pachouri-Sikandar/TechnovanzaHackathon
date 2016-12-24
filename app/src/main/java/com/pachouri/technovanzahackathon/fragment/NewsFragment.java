@@ -64,8 +64,8 @@ public class NewsFragment extends Fragment {
                     "platform, including the ability to display multiple apps on-screen at once " +
                     "in a split-screen view, support for inline replies to notifications, as well" +
                     " as an OpenJDK-based Java environment and support for the Vulkan graphics " +
-                    "rendering API, and seamless system updates on supported devices.",
-                    "http://wefix.co.za/wp-content/uploads/2016/08/android-nougat-1.jpg", "Latest release 7.1.1", "https://lh3.googleusercontent.com/-B7ObxLWBsRU/AAAAAAAAAAI/AAAAAAAAW_w/VGt2B9ZL1k4/s46-c-k-no/photo.jpg");
+                    "rendering API, and seamless system updates on supported devices.", "Latest release 7.1.1",
+                    "http://wefix.co.za/wp-content/uploads/2016/08/android-nougat-1.jpg", "https://lh3.googleusercontent.com/-B7ObxLWBsRU/AAAAAAAAAAI/AAAAAAAAW_w/VGt2B9ZL1k4/s46-c-k-no/photo.jpg");
             newsList.add(newsListModel);
         }
         if (attachContext != null) {
