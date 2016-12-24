@@ -111,6 +111,7 @@
             android:layout_marginLeft="20dp">
 
             <ImageView
+                android:id="@+id/iv_play"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:src="@drawable/play" />
@@ -194,7 +195,7 @@
                         android:id="@+id/spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="17dp">
+                        android:layout_margin="14dp">
 
                     </Spinner>
 
