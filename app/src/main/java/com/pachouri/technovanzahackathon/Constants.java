@@ -7,5 +7,5 @@ import com.pachouri.technovanzahackathon.widgets.FontHelper;
  */
 
 public class Constants {
-    public static final int APP_FONTS= FontHelper.FONT_OPENSANS;
+    public static final int APP_FONTS= FontHelper.FONT_ROBOTO;
 }
