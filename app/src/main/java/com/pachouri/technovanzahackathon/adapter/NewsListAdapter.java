@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pachouri.technovanzahackathon.R;
-import com.pachouri.technovanzahackathon.model.NewsListModel;
+import com.pachouri.technovanzahackathon.model.NewsListSerializableModel;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -23,9 +23,9 @@ import java.util.List;
 public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsListViewHolder> {
     private Context context;
     private LayoutInflater layoutInflater;
-    private List<NewsListModel> newList = new ArrayList<>();
+    private List<NewsListSerializableModel> newList = new ArrayList<>();
 
-    public NewsListAdapter(Context context, List<NewsListModel> newList) {
+    public NewsListAdapter(Context context, List<NewsListSerializableModel> newList) {
         this.context = context;
         this.layoutInflater = LayoutInflater.from(context);
         this.newList = newList;
@@ -47,16 +47,15 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsLi
     public void onBindViewHolder(NewsListViewHolder holder, int position) {
         if (newList != null) {
             if (newList.size() > 0) {
-                NewsListModel newsListModel = newList.get(position);
+                NewsListSerializableModel newsListModel = newList.get(position);
                 holder.textViewName.setText(newsListModel.getName());
                 holder.textViewTime.setText(newsListModel.getTime());
                 holder.textViewCity.setText(newsListModel.getCity());
                 holder.textViewDescription.setText(newsListModel.getDescription());
                 holder.textViewComments.setText(newsListModel.getComments());
-
-                Picasso.with(context).load(newsListModel.getUserImageUrl()).into(holder
+                Picasso.with(context).load(newsListModel.getPimg()).into(holder
                         .imageViewNewsBy);
-                Picasso.with(context).load(newsListModel.getNewImageUrl()).into(holder
+                Picasso.with(context).load(newsListModel.getImg()).into(holder
                         .imageViewNews, new Callback() {
                     @Override
                     public void onSuccess() {
