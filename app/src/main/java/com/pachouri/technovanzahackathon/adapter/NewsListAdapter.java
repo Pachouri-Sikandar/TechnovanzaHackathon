@@ -5,10 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.pachouri.technovanzahackathon.R;
 import com.pachouri.technovanzahackathon.model.NewsListModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +52,11 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsLi
                 holder.textViewCity.setText(newsListModel.getCity());
                 holder.textViewDescription.setText(newsListModel.getDescription());
                 holder.textViewComments.setText(newsListModel.getComments());
+
+                Picasso.with(context).load(newsListModel.getUserImageUrl()).into(holder
+                        .imageViewNewsBy);
+                Picasso.with(context).load(newsListModel.getNewImageUrl()).into(holder
+                        .imageViewNews);
             }
         }
     }
@@ -60,6 +67,8 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsLi
         private TextView textViewTime;
         private TextView textViewDescription;
         private TextView textViewComments;
+        private ImageView imageViewNewsBy;
+        private ImageView imageViewNews;
 
         public NewsListViewHolder(View itemView) {
             super(itemView);
@@ -68,6 +77,8 @@ public class NewsListAdapter extends RecyclerView.Adapter<NewsListAdapter.NewsLi
             textViewTime = (TextView) itemView.findViewById(R.id.textViewTime);
             textViewDescription = (TextView) itemView.findViewById(R.id.textViewDescription);
             textViewComments = (TextView) itemView.findViewById(R.id.textViewComments);
+            imageViewNewsBy = (ImageView) itemView.findViewById(R.id.imageViewNewsBy);
+            imageViewNews = (ImageView) itemView.findViewById(R.id.imageViewNews);
         }
     }
 }
