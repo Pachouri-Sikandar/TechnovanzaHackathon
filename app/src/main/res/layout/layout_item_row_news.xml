@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:card_view="http://schemas.android.com/apk/res-auto"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_margin="@dimen/dp_8"
-              android:background="@android:color/darker_gray"
-              android:orientation="vertical">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_8"
+    android:background="@android:color/darker_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardViewNews"
@@ -50,15 +51,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Android"
+                        android:textColor="@android:color/black"
                         />
 
-                    <TextView
+                    <com.pachouri.technovanzahackathon.widgets.AppTextView
                         android:id="@+id/textViewCity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:text="Android"
-                        android:textStyle="bold"
+                        app:textStyle="@integer/semi_bold"
                         />
 
                 </LinearLayout>
@@ -74,7 +76,8 @@
                     />
             </RelativeLayout>
 
-            <TextView
+
+            <com.pachouri.technovanzahackathon.widgets.AppTextView
                 android:id="@+id/textViewDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -82,7 +85,9 @@
                 android:layout_margin="@dimen/dp_8"
                 android:layout_marginTop="@dimen/dp_8"
                 android:maxLines="5"
+                android:textColor="@android:color/black"
                 android:text="Android 7.0–7.1.1 Nougat (codenamed Android N during development)[4] is the seventh major version of the Android operating system. First released as a beta build on March 9, 2016,[5] it was officially released on August 22, 2016, with Nexus devices being the first to receive the update, though the LG V20 was the first new smartphone released with Nougat. Nougat introduces notable changes to the operating system and its development platform, including the ability to display multiple apps on-screen at once in a split-screen view, support for inline replies to notifications, as well as an OpenJDK-based Java environment and support for the Vulkan graphics rendering API, and seamless system updates on supported devices."
+                app:textStyle="@integer/regular"
                 />
 
             <ImageView
@@ -94,13 +99,15 @@
                 android:src="@mipmap/ic_launcher"
                 />
 
-            <TextView
+            <com.pachouri.technovanzahackathon.widgets.AppTextView
                 android:id="@+id/textViewComments"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_margin="@dimen/dp_8"
                 android:text="Android"
+                android:textColor="@android:color/black"
+                android:alpha="0.8"
                 />
 
         </LinearLayout>
