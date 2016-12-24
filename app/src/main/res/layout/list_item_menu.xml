@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="4dp"
+        android:layout_marginLeft="8dp"
+        android:alpha="0.5"
+        android:src="@drawable/ic_share_black"
+        android:layout_gravity="center_vertical"
+        />
+
+    <com.pachouri.technovanzahackathon.widgets.AppTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share"
+        android:layout_marginLeft="26dp"
+        app:textStyle="@integer/semi_bold"
+        />
+
+
+</LinearLayout>

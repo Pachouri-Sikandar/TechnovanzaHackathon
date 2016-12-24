@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="light">0</integer>
+    <integer name="regular">1</integer>
+    <integer name="bold">2</integer>
+    <integer name="semi_bold">3</integer>
+
+</resources>
