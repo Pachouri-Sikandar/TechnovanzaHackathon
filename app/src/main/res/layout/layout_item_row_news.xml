@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:card_view="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dp_8"
+              android:background="@android:color/darker_gray"
               android:orientation="vertical">
 
     <android.support.v7.widget.CardView
@@ -11,10 +13,67 @@
         android:layout_height="wrap_content"
         android:background="@color/colorWhite"
         card_view:cardCornerRadius="2dp"
-        card_view:cardElevation="3dp"
         card_view:cardPreventCornerOverlap="false">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/textViewName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android"
+                        />
+
+                    <TextView
+                        android:id="@+id/textViewCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Android"
+                        />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/textViewTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Android"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:maxLines="5"
+                android:text="Android 7.0–7.1.1 Nougat (codenamed Android N during development)[4] is the seventh major version of the Android operating system. First released as a beta build on March 9, 2016,[5] it was officially released on August 22, 2016, with Nexus devices being the first to receive the update, though the LG V20 was the first new smartphone released with Nougat. Nougat introduces notable changes to the operating system and its development platform, including the ability to display multiple apps on-screen at once in a split-screen view, support for inline replies to notifications, as well as an OpenJDK-based Java environment and support for the Vulkan graphics rendering API, and seamless system updates on supported devices."
+                />
+
+            <TextView
+                android:id="@+id/textViewComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Android"
+                />
+        </LinearLayout>
     </android.support.v7.widget.CardView>
-
-
 </LinearLayout>
+
