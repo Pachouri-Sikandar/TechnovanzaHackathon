@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TechnovanzaHackathon</string>
     <string name="action_settings">Settings</string>
+    <string name="something">a</string>
     <string name="tab_title_music">MUSIC</string>
     <string name="tab_title_news">NEWS</string>
 </resources>
