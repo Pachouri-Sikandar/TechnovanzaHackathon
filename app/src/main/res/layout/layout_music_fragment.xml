@@ -195,7 +195,7 @@
                         android:id="@+id/spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="14dp">
+                        android:layout_margin="12dp">
 
                     </Spinner>
 
@@ -242,7 +242,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_margin="12dp"
+                        android:layout_margin="14dp"
                         android:layout_height="wrap_content">
 
 
