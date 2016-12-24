@@ -5,16 +5,22 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 
 import com.pachouri.technovanzahackathon.R;
+import com.pachouri.technovanzahackathon.directory.HomeMenuAdapter;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     DrawerLayout drawerLayout;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        recyclerView = (RecyclerView) findViewById(R.id.rv_home_menu);
 
         initViews();
     }
@@ -39,6 +46,25 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         mDrawerToggle.syncState();
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        recyclerView.setAdapter(new HomeMenuAdapter(getApplicationContext(),getMenuString(),getImageList()));
+    }
+
+    private ArrayList<Integer> getImageList(){
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(R.drawable.ic_share_black);
+        arrayList.add(R.drawable.ic_send_black);
+
+        return arrayList;
+    }
+
+    private ArrayList<String> getMenuString(){
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Share");
+        arrayList.add("Feedback");
+
+        return arrayList;
     }
 
     @Override
