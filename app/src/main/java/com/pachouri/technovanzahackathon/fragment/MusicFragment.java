@@ -1,6 +1,7 @@
 package com.pachouri.technovanzahackathon.fragment;
 
 import android.content.DialogInterface;
+import android.graphics.PorterDuff;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -69,6 +70,8 @@ public class MusicFragment extends Fragment {
     }
 
     private void setSpinner(Spinner spinner){
+
+        spinner.getBackground().setColorFilter(getResources().getColor(android.R.color.darker_gray), PorterDuff.Mode.SRC_ATOP);
 
         List<String> categories = new ArrayList<String>();
         categories.add("Games");
